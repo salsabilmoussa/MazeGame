@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta class="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAZE GAME</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <section>
+        <div class="container">
+          <div class="background-img">
+            <div class="box">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <h2>SELECT LEVEL :</h2>
+              <div class="content">
+              <form id="form">
+                <input type="radio" id="easy" name="drone" value="easy" checked >
+                <label for="easy">Easy</label><br>
+                <input type="radio" id="medium" name="drone" value="medium" >
+                <label for="medium">Medium</label><br>
+                <input type="radio" id="hard" name="drone" value="hard">
+                <label for="hard">Hard</label><br> 
+                <div id="submit" onclick="start()">▶ Play </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <h1 class="heading cached" >Find the way out of Maze in 2 minutes</h1>
+      <div class="timer-board cached">
+        <div class="timer">02:00</div>
+        <div class="button-containers">
+            <div class="game-button" onclick="pauseGame(this)">⏸</div>
+            <div class="game-button" onclick="location.reload()">🔁</div>
+        </div>
+      </div>
+    <div class="game-board cached">
+        <div class="maze"></div>
+    </div> 
+    <div class="board win-result cached">
+     <span class="close"  onclick="location.reload()">&times</span>
+     <div>You win!!!</div>
+        <div class="result-details" id="score"></div>
+        <div class="result-details" id="time"></div>
+        <button onclick="location.reload()">⟳ Replay</button> 
+    </div>
+    <div class="board lose-result cached"> 
+         <span class="close" onclick="location.reload()">&times</span>
+        <div>You Lose!!!</div>
+       <button onclick="location.reload()">⟳ Replay</button>
+       
+    </div>  
+</body>
+<script src="script.js"></script> 
+</html>
